@@ -1,0 +1,519 @@
+/* ============================================================
+   SHARED COMPONENTS — injected by components.js
+   ============================================================ */
+
+/* ── Inner Page Hero (for non-landing pages) ── */
+.page-hero {
+    position: relative;
+    padding: 10rem 0 5rem;
+    background: var(--clr-bg);
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 80% at 80% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(201, 168, 76, 0.03) 0%, transparent 100%);
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--clr-border), transparent);
+}
+
+.page-hero__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-text-subtle);
+}
+
+.page-hero__breadcrumb a {
+    color: var(--clr-gold);
+    transition: color var(--transition);
+}
+
+.page-hero__breadcrumb a:hover {
+    color: var(--clr-gold-light);
+}
+
+.page-hero__breadcrumb-sep {
+    color: var(--clr-text-subtle);
+}
+
+.page-hero__title {
+    font-family: var(--ff-serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--clr-text);
+    max-width: 700px;
+}
+
+.page-hero__title em {
+    font-style: italic;
+    color: var(--clr-gold-light);
+}
+
+.page-hero__subtitle {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--clr-text-muted);
+    max-width: 520px;
+}
+
+/* ── Team Profile Card (full page version) ── */
+.profile-card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    overflow: hidden;
+    transition: border-color var(--transition);
+}
+
+.profile-card:hover {
+    border-color: rgba(201, 168, 76, 0.35);
+}
+
+.profile-card__top {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    min-height: 420px;
+}
+
+.profile-card__photo {
+    position: relative;
+    overflow: hidden;
+    background: var(--clr-surface-2);
+}
+
+.profile-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(20%) contrast(1.05);
+    transition: filter var(--transition), transform 0.6s ease;
+}
+
+.profile-card:hover .profile-card__photo img {
+    filter: grayscale(0%) contrast(1.05);
+    transform: scale(1.03);
+}
+
+.profile-card__photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            transparent 70%,
+            var(--clr-surface) 100%);
+    pointer-events: none;
+}
+
+.profile-card__header {
+    padding: 2.5rem 2.5rem 2rem;
+    border-bottom: 1px solid var(--clr-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.profile-card__name {
+    font-family: var(--ff-serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--clr-text);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+}
+
+.profile-card__role {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 1.5rem;
+}
+
+.profile-card__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.profile-card__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+    transition: color var(--transition);
+}
+
+.profile-card__contact-item:hover {
+    color: var(--clr-text);
+}
+
+.profile-card__contact-icon {
+    width: 14px;
+    height: 14px;
+    stroke: var(--clr-gold);
+    fill: none;
+    stroke-width: 1.5;
+    flex-shrink: 0;
+}
+
+.profile-card__linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    padding: 0.4rem 0.9rem;
+    transition: background var(--transition), color var(--transition);
+}
+
+.profile-card__linkedin:hover {
+    background: var(--clr-gold);
+    color: var(--clr-bg);
+}
+
+.profile-card__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid var(--clr-border);
+}
+
+.profile-card__section {
+    padding: 2rem 2.5rem;
+    border-right: 1px solid var(--clr-border);
+}
+
+.profile-card__section:last-child {
+    border-right: none;
+}
+
+.profile-card__section-title {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.profile-card__bio {
+    font-size: 0.82rem;
+    line-height: 1.85;
+    color: var(--clr-text-muted);
+}
+
+.profile-card__bio p+p {
+    margin-top: 0.85rem;
+}
+
+.profile-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.profile-card__list-item {
+    font-size: 0.78rem;
+    color: var(--clr-text-muted);
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.profile-card__list-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 4px;
+    height: 1px;
+    background: var(--clr-gold);
+}
+
+.profile-card__edu-item {
+    margin-bottom: 0.85rem;
+}
+
+.profile-card__edu-degree {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--clr-text);
+    line-height: 1.4;
+}
+
+.profile-card__edu-detail {
+    font-size: 0.72rem;
+    color: var(--clr-text-subtle);
+    margin-top: 0.15rem;
+}
+
+/* Responsive profile card */
+@media (max-width: 900px) {
+    .profile-card__top {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card__photo {
+        height: 320px;
+    }
+
+    .profile-card__photo-overlay {
+        background: linear-gradient(to bottom, transparent 70%, var(--clr-surface) 100%);
+    }
+
+    .profile-card__body {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card__section {
+        border-right: none;
+        border-bottom: 1px solid var(--clr-border);
+    }
+
+    .profile-card__section:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ── Legal Pages ── */
+.legal-content {
+    padding: clamp(4rem, 8vw, 7rem) 0;
+    background: var(--clr-bg);
+}
+
+.legal-content__inner {
+    max-width: 820px;
+}
+
+.legal-content h2 {
+    font-family: var(--ff-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--clr-text);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.legal-content h2:first-child {
+    margin-top: 0;
+}
+
+.legal-content p {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--clr-text-muted);
+    margin-bottom: 1rem;
+}
+
+.legal-content ul {
+    margin: 0.75rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legal-content ul li {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--clr-text-muted);
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.legal-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 5px;
+    height: 1px;
+    background: var(--clr-gold);
+}
+
+.legal-content a {
+    color: var(--clr-gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.legal-content strong {
+    color: var(--clr-text);
+    font-weight: 500;
+}
+
+/* ── Practice Area Detail Page ── */
+.practice-detail {
+    padding: clamp(4rem, 8vw, 7rem) 0;
+    background: var(--clr-bg);
+}
+
+.practice-detail__grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 4rem;
+    align-items: start;
+}
+
+.practice-detail__main {}
+
+.practice-detail__sidebar {
+    position: sticky;
+    top: 6rem;
+}
+
+.practice-detail__intro {
+    font-family: var(--ff-serif);
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--clr-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.practice-detail__body p {
+    font-size: 0.88rem;
+    line-height: 1.9;
+    color: var(--clr-text-muted);
+    margin-bottom: 1.25rem;
+}
+
+.practice-detail__body h3 {
+    font-family: var(--ff-serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--clr-text);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.practice-detail__contracts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.practice-detail__contract-tag {
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    padding: 0.4rem 0.9rem;
+    background: rgba(201, 168, 76, 0.04);
+}
+
+.sidebar-card {
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-card__title {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--clr-gold);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.sidebar-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.sidebar-card__item {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.sidebar-card__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 4px;
+    height: 1px;
+    background: var(--clr-gold);
+}
+
+.sidebar-card__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--clr-text-muted);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.06);
+    transition: color var(--transition);
+}
+
+.sidebar-card__link:last-child {
+    border-bottom: none;
+}
+
+.sidebar-card__link:hover {
+    color: var(--clr-gold);
+}
+
+.sidebar-card__link-arrow {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--clr-gold);
+}
+
+@media (max-width: 900px) {
+    .practice-detail__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-detail__sidebar {
+        position: static;
+    }
+}

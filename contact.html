@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | George Whitehead Inc. — Attorneys &amp; Conveyancers</title>
+    <meta name="description"
+        content="Contact George Whitehead Inc. — offices in George and Cape Town. Schedule a confidential consultation with our team of specialist attorneys and conveyancers." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="pages.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+    <main>
+
+        <!-- ── Page Hero ── -->
+        <section class="page-hero">
+            <div class="container page-hero__inner">
+                <div class="page-hero__breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="page-hero__breadcrumb-sep">›</span>
+                    <span>Contact</span>
+                </div>
+                <span class="gold-line"></span>
+                <h1 class="page-hero__title">
+                    Begin Your<br><em>Consultation</em>
+                </h1>
+                <p class="page-hero__subtitle">
+                    We invite you to reach out for a confidential discussion about your legal matter. Our team will
+                    respond promptly and with the discretion your situation deserves.
+                </p>
+            </div>
+        </section>
+
+        <!-- ── Contact Body ── -->
+        <section style="padding: clamp(4rem,8vw,7rem) 0; background: var(--clr-bg);">
+            <div class="container">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(3rem,6vw,7rem); align-items:start;">
+
+                    <!-- Form -->
+                    <div class="reveal">
+                        <span class="section-label">Send an Enquiry</span>
+                        <span class="gold-line"></span>
+                        <h2 class="section-title" style="margin-bottom:1.5rem;">Get in <em>Touch</em></h2>
+
+                        <form class="contact__form" id="contact-form" novalidate aria-label="Contact form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="form-name">Full Name</label>
+                                    <input class="form-input" type="text" id="form-name" name="name"
+                                        placeholder="Your full name" required autocomplete="name" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="form-company">Company / Organisation</label>
+                                    <input class="form-input" type="text" id="form-company" name="company"
+                                        placeholder="Optional" autocomplete="organization" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="form-email">Email Address</label>
+                                    <input class="form-input" type="email" id="form-email" name="email"
+                                        placeholder="your@email.com" required autocomplete="email" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="form-phone">Phone Number</label>
+                                    <input class="form-input" type="tel" id="form-phone" name="phone"
+                                        placeholder="+27 …" autocomplete="tel" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="form-practice">Practice Area</label>
+                                <select class="form-input" id="form-practice" name="practice" style="cursor:pointer;">
+                                    <option value="" disabled selected>Select a practice area…</option>
+                                    <option value="commercial">Commercial &amp; Banking Law</option>
+                                    <option value="construction">Construction Law</option>
+                                    <option value="conveyancing">Property &amp; Conveyancing</option>
+                                    <option value="other">Other / General Enquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="form-matter">Nature of Matter</label>
+                                <input class="form-input" type="text" id="form-matter" name="matter"
+                                    placeholder="Brief description of your matter" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="form-message">Message</label>
+                                <textarea class="form-textarea" id="form-message" name="message"
+                                    placeholder="Please provide a brief overview of your matter and how we can assist…"
+                                    rows="6"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" id="form-submit" style="align-self:flex-start;">
+                                Send Enquiry
+                                <span class="btn-arrow">→</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Offices & Direct Contacts -->
+                    <div class="reveal reveal-delay-1" style="display:flex; flex-direction:column; gap:1.5rem;">
+
+                        <div class="contact__office">
+                            <p class="contact__office-city">George — Head Office</p>
+                            <address class="contact__office-addr">
+                                First Floor, Church Corner Building<br>
+                                Cnr of Courtney &amp; Kerk Street<br>
+                                George, 6529<br><br>
+                                <strong
+                                    style="color:var(--clr-text-muted); font-size:0.75rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase;">Office</strong><br>
+                                <a href="tel:+27448741838" style="color:var(--clr-gold);">+27 (0)44 874 1838</a>
+                            </address>
+                        </div>
+
+                        <div class="contact__office">
+                            <p class="contact__office-city">Cape Town — Branch Office</p>
+                            <address class="contact__office-addr">
+                                1st Floor, Tyger Valley Chambers One<br>
+                                27 Willie Van Schoor Drive<br>
+                                Cape Town, 7530<br><br>
+                                <strong
+                                    style="color:var(--clr-text-muted); font-size:0.75rem; font-weight:500; letter-spacing:0.1em; text-transform:uppercase;">Office</strong><br>
+                                <a href="tel:+27448741838" style="color:var(--clr-gold);">+27 (0)44 874 1838</a>
+                            </address>
+                        </div>
+
+                        <!-- Direct contacts -->
+                        <div class="contact__office" style="border-color:rgba(201,168,76,0.25);">
+                            <p class="contact__office-city">Direct Contacts</p>
+                            <div style="display:flex; flex-direction:column; gap:1rem; margin-top:0.5rem;">
+                                <div>
+                                    <p
+                                        style="font-family:var(--ff-serif); font-size:1rem; color:var(--clr-text); margin-bottom:0.25rem;">
+                                        George Whitehead</p>
+                                    <p
+                                        style="font-size:0.65rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--clr-gold); margin-bottom:0.5rem;">
+                                        Director</p>
+                                    <a href="tel:+27836290160"
+                                        style="display:block; font-size:0.82rem; color:var(--clr-text-muted); margin-bottom:0.2rem;">+27
+                                        (0)83 629 0160</a>
+                                    <a href="mailto:george@gwinc.co.za"
+                                        style="font-size:0.82rem; color:var(--clr-gold);">george@gwinc.co.za</a>
+                                </div>
+                                <div style="border-top:1px solid var(--clr-border); padding-top:1rem;">
+                                    <p
+                                        style="font-family:var(--ff-serif); font-size:1rem; color:var(--clr-text); margin-bottom:0.25rem;">
+                                        Loren Giles</p>
+                                    <p
+                                        style="font-size:0.65rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--clr-gold); margin-bottom:0.5rem;">
+                                        Associate</p>
+                                    <a href="tel:+27836516705"
+                                        style="display:block; font-size:0.82rem; color:var(--clr-text-muted); margin-bottom:0.2rem;">+27
+                                        (0)83 651 6705</a>
+                                    <a href="mailto:loren@gwinc.co.za"
+                                        style="font-size:0.82rem; color:var(--clr-gold);">loren@gwinc.co.za</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__office"
+                            style="background:var(--clr-gold-dim); border-color:rgba(201,168,76,0.25);">
+                            <p class="contact__office-city">Office Hours</p>
+                            <p class="contact__office-addr">
+                                Monday – Friday: 08:00 – 17:00<br><br>
+                                <span style="color:var(--clr-text-subtle); font-size:0.8rem;">Appointments are
+                                    recommended. After-hours consultations may be arranged by prior arrangement.</span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="components.js"></script>
+    <script>
+        const form = document.getElementById('contact-form');
+        if (form)
+        {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var btn = form.querySelector('[type="submit"]');
+                var original = btn.innerHTML;
+                btn.innerHTML = 'Message Sent ✓';
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--clr-gold)';
+                btn.style.borderColor = 'var(--clr-gold)';
+                btn.disabled = true;
+                setTimeout(function () {
+                    btn.innerHTML = original;
+                    btn.style.cssText = '';
+                    btn.disabled = false;
+                    form.reset();
+                }, 4000);
+            });
+        }
+    </script>
+</body>
+
+</html>
